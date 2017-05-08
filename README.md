@@ -23,18 +23,6 @@ Add to your "__composer.json__" file under the "__require__" section:
 "cjd/fpdfbundle": "dev-master"
 ```
 
-You may also need to add a "__repositories__" section:
-
-```
-  "repositories": [
-    {
-      "name": "cjd/fpdfbundle",
-      "type": "vcs",
-      "url": "https://github.com/coreydoughty/FpdfBundle"
-    }
-  ],
-```
-
 Then, enable the bundle by adding the following line in the app/AppKernel.php file of your project:
 
 ```php
