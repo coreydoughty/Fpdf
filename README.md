@@ -1,26 +1,31 @@
 FPDF Symfony Bundle
 ===================
 
-A symfony bundle wrapper around the great php FPDF class. All credit to them.
+A Symfony bundle wrapper around the great php FPDF class. All credit to them.
 
 [FPDF Website](http://www.fpdf.org/)
 
-Currently uses FPDF 1.81. Tested in Symfony 3.
+Currently uses FPDF 1.81. Tested in Symfony 3.x . Should work with Symfony 2.x .
 
 
 
 ### Requirements
 
-![PHP](http://pixel-cookers.github.io/built-with-badges/php/php-short-flat.png)
 ![Symfony](http://pixel-cookers.github.io/built-with-badges/symfony/symfony-short-flat.png)
 
 
 
 ### Installation
 
-Add to your "__composer.json__" file (section may already exist):
+Add to your "__composer.json__" file under the "__require__" section:
 
-```json
+```
+"cjd/fpdfbundle": "dev-master"
+```
+
+You may also need to add a "__repositories__" section:
+
+```
   "repositories": [
     {
       "name": "cjd/fpdfbundle",
@@ -30,18 +35,68 @@ Add to your "__composer.json__" file (section may already exist):
   ],
 ```
 
-```json
-  "require": {
-    "cjd/fpdfbundle": "dev-master"
-  },
-```
-
-In the file "__app/AppKernel.php__" add to the "__AppKernel__" class, "__registerBundles__" function, "__bundles__" array, a line similar to:
+Then, enable the bundle by adding the following line in the app/AppKernel.php file of your project:
 
 ```php
-new CJD\FpdfBundle\CJDFpdfBundle(),
+// app/AppKernel.php
+
+// ...
+class AppKernel extends Kernel
+{
+    public function registerBundles()
+    {
+        $bundles = array(
+            // ...
+
+            new CJD\FpdfBundle\CJDFpdfBundle(),
+        );
+
+        // ...
+    }
+
+    // ...
+}
 ```
 
+Update composer
+
+```sh
+php composer.phar update
+```
+
+
+### Usage
+
+In your php file that you want to use the class add a use statement.
+
+```php
+use CJD\FpdfBundle\Model\fpdf;
+```
+
+Then use as per the FPDF documantation.
+
+``` php
+$pdf = new fpdf();
+```
+
+Alternatively you can extend as a typical php class.
+
+```php
+class CustomPdf extends fpdf
+{
+    public function __construct(
+        $orientation = 'P',
+        $unit = 'mm',
+        $size = 'letter'
+    ) {
+        parent::__construct( $orientation, $unit, $size );
+        // ...
+    }
+}
+
+```
+
+You can also call fpdf as a Symfony service by using "__cjd.fpdf__". See Symfony [documetnation](http://symfony.com/doc/current/service_container.html) for service usages.
 
 
 ### License (MIT)
