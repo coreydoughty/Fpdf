@@ -19,11 +19,12 @@
 
     <filter>
         <whitelist>
-            <directory>src</directory>
+            <directory>./</directory>
             <exclude>
-                <directory>src/*Bundle/Resources</directory>
-                <directory>src/*/*Bundle/Resources</directory>
-                <directory>src/*/Bundle/*Bundle/Resources</directory>
+                <directory>./Resources</directory>
+                <directory>./Model</directory>
+                <directory>./Tests</directory>
+                <directory>./vendor</directory>
             </exclude>
         </whitelist>
     </filter>
