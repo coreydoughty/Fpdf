@@ -5,6 +5,7 @@
   "description": "FPDF Symfony Bundle",
   "keywords": ["fpdf", "symfony", "bundle"],
   "license": "MIT",
+  "type": "library",
   "authors": [
     {
       "name": "Corey Doughty",
@@ -13,7 +14,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "": "src/"
+      "CJD\\FpdfBundle\\": "src"
     }
   },
   "require": {

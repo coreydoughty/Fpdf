@@ -18,6 +18,24 @@ Currently uses FPDF 1.81. Tested in Symfony 3.
 
 ### Installation
 
+Add to your "__composer.json__" file (section may already exist):
+
+```json
+  "repositories": [
+    {
+      "name": "cjd/fpdfbundle",
+      "type": "vcs",
+      "url": "https://github.com/coreydoughty/FpdfBundle"
+    }
+  ],
+```
+
+```json
+  "require": {
+    "cjd/fpdfbundle": "dev-master"
+  },
+```
+
 In the file "__app/AppKernel.php__" add to the "__AppKernel__" class, "__registerBundles__" function, "__bundles__" array, a line similar to:
 
 ```php
