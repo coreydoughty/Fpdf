@@ -1,0 +1,32 @@
+{
+  "name": "cjd/fpdfbundle",
+  "version": "0.0.1",
+  "homepage": "https://github.com/coreydoughty/FpdfBundle",
+  "description": "FPDF Symfony Bundle",
+  "keywords": ["fpdf", "symfony", "bundle"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Corey Doughty",
+      "email": "corey@doughty.ca"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "": "src/"
+    }
+  },
+  "require": {
+    "php": ">=5.5.9",
+    "symfony/symfony": ">=2.0.0"
+  },
+  "require-dev": {
+    "symfony/phpunit-bridge": "^3.0",
+    "phpunit/phpunit": "*"
+  },
+  "config": {
+    "platform": {
+      "php": "5.5.9"
+    }
+  }
+}

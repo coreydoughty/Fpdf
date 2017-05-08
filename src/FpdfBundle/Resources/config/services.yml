@@ -1,0 +1,3 @@
+services:
+    cjd.fpdf:
+        class: CJD\FpdfBundle\Model\fpdf

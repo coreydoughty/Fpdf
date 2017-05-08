@@ -1,0 +1,15 @@
+/var/
+!var/cache/.gitkeep
+!var/logs/.gitkeep
+/vendor/
+/build/
+/.idea/
+.buildpath
+.project
+/.settings/
+/nbproject/
+/node_modules/*
+files
+*@eaDir*
+.DS_Store
+*~
