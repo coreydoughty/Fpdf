@@ -1,5 +1,4 @@
 <?php
-
 namespace CJD\FpdfBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
