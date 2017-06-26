@@ -5,7 +5,7 @@ A Symfony bundle wrapper around the great php FPDF class. All credit to them.
 
 [FPDF Website](http://www.fpdf.org/)
 
-Currently uses FPDF 1.81. Tested in Symfony 3.x . Should work with Symfony 2.x .
+Currently uses FPDF 1.81. Also includes tFPDF 1.24. Tested in Symfony 3.x . Should work with Symfony 2.x .
 
 
 

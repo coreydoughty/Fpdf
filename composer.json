@@ -1,6 +1,6 @@
 {
   "name": "cjd/fpdfbundle",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/coreydoughty/FpdfBundle",
   "description": "FPDF Symfony Bundle",
   "keywords": ["fpdf", "symfony", "bundle"],
