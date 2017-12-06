@@ -1,8 +1,8 @@
 {
   "name": "cjd/fpdf",
-  "homepage": "https://github.com/coreydoughty/FpdfBundle",
+  "homepage": "https://github.com/coreydoughty/Fpdf",
   "description": "FPDF Wrapper",
-  "keywords": ["fpdf", "symfony", "bundle"],
+  "keywords": ["fpdf", "pdf", "wrapper"],
   "license": "MIT",
   "type": "library",
   "authors": [

@@ -9,7 +9,8 @@ Currently uses FPDF 1.81.
 
 
 
-### Installation
+
+## Installation
 
 Add to your "__composer.json__" file under the "__require__" section:
 
@@ -25,7 +26,8 @@ php composer.phar update
 ```
 
 
-### Usage
+
+## Usage
 
 In your php file that you want to use the class add a use statement.
 
@@ -55,6 +57,7 @@ class CustomPdf extends Fpdf
 }
 
 ```
+
 
 
 ### License FPDF
