@@ -1,17 +1,11 @@
 FPDF Wrapper Class
 ===================
 
-A wrapper around the great php FPDF class. All credit to them.
+A named spaced composer wrapper around the great php FPDF class. All credit to them.
 
 [FPDF Website](http://www.fpdf.org/)
 
 Currently uses FPDF 1.81.
-
-
-
-### Requirements
-
-![Symfony](http://pixel-cookers.github.io/built-with-badges/symfony/symfony-short-flat.png)
 
 
 
