@@ -1,12 +1,11 @@
 FPDF Wrapper Class
 ===================
 
-A named spaced composer wrapper around the great php FPDF class. All credit to them.
+A composer wrapper around the great php FPDF class. All credit to them.
 
 [FPDF Website](http://www.fpdf.org/)
 
 Currently uses FPDF 1.81.
-
 
 
 
@@ -15,7 +14,7 @@ Currently uses FPDF 1.81.
 Add to your "__composer.json__" file under the "__require__" section:
 
 ```
-"cjd/fpdfbundle": "dev-master"
+"cjd/fpdf": "dev-master"
 ```
 
 
