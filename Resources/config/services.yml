@@ -1,5 +1,0 @@
-services:
-    cjd.fpdf:
-        class: CJD\FpdfBundle\Model\fpdf
-    cjd.tfpdf:
-        class: CJD\FpdfBundle\Model\tfpdf

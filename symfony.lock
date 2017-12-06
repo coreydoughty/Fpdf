@@ -1,0 +1,53 @@
+{
+    "psr/container": {
+        "version": "1.0.0"
+    },
+    "psr/simple-cache": {
+        "version": "1.0.0"
+    },
+    "symfony/cache": {
+        "version": "v4.0.1"
+    },
+    "symfony/config": {
+        "version": "v4.0.1"
+    },
+    "symfony/debug": {
+        "version": "v4.0.1"
+    },
+    "symfony/dependency-injection": {
+        "version": "v4.0.1"
+    },
+    "symfony/event-dispatcher": {
+        "version": "v4.0.1"
+    },
+    "symfony/filesystem": {
+        "version": "v4.0.1"
+    },
+    "symfony/finder": {
+        "version": "v4.0.1"
+    },
+    "symfony/framework-bundle": {
+        "version": "3.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "3.3",
+            "ref": "c0fdace641ed81c02668d6bfc0fc76a2b39ee7c9"
+        }
+    },
+    "symfony/http-foundation": {
+        "version": "v4.0.1"
+    },
+    "symfony/http-kernel": {
+        "version": "v4.0.1"
+    },
+    "symfony/routing": {
+        "version": "3.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "3.3",
+            "ref": "a249484db698d1a847a30291c8f732414ac47e25"
+        }
+    }
+}

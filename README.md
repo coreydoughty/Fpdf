@@ -5,7 +5,7 @@ A Symfony bundle wrapper around the great php FPDF class. All credit to them.
 
 [FPDF Website](http://www.fpdf.org/)
 
-Currently uses FPDF 1.81. Also includes tFPDF 1.24. Tested in Symfony 3.x . Should work with Symfony 2.x .
+Currently uses FPDF 1.81. Testing in Symfony 4.x.
 
 
 
@@ -26,24 +26,12 @@ Add to your "__composer.json__" file under the "__require__" section:
 Then, enable the bundle by adding the following line in the app/AppKernel.php file of your project:
 
 ```php
-// app/AppKernel.php
+// config/bundles.php
 
 // ...
-class AppKernel extends Kernel
-{
-    public function registerBundles()
-    {
-        $bundles = array(
-            // ...
-
-            new CJD\FpdfBundle\CJDFpdfBundle(),
-        );
-
-        // ...
-    }
-
-    // ...
-}
+return [
+    Fpdf\FpdfBundle::class => ['all' => true],
+];
 ```
 
 Update composer
@@ -58,7 +46,7 @@ php composer.phar update
 In your php file that you want to use the class add a use statement.
 
 ```php
-use CJD\FpdfBundle\Model\fpdf;
+use FpdfBundle\Model\fpdf;
 ```
 
 Then use as per the FPDF documantation.
@@ -83,8 +71,6 @@ class CustomPdf extends fpdf
 }
 
 ```
-
-You can also call fpdf as a Symfony service by using "__cjd.fpdf__". See Symfony [documetnation](http://symfony.com/doc/current/service_container.html) for service usages.
 
 
 ### License (MIT)

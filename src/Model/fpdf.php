@@ -1,5 +1,5 @@
 <?php
-namespace CJD\FpdfBundle\Model;
+namespace FpdfBundle\Model;
 
 /*******************************************************************************
  * FPDF                                                                         *
