@@ -1,5 +1,5 @@
 {
-  "name": "cjd/fpdfbundle",
+  "name": "cjd/fpdf",
   "homepage": "https://github.com/coreydoughty/FpdfBundle",
   "description": "FPDF Wrapper",
   "keywords": ["fpdf", "symfony", "bundle"],
