@@ -1,5 +1,5 @@
 <?php
-namespace FpdfBundle\Model;
+namespace Fpdf;
 
 /*******************************************************************************
  * FPDF                                                                         *
@@ -12,7 +12,7 @@ namespace FpdfBundle\Model;
 //define('FPDF_VERSION','1.81');
 
 
-class fpdf
+class Fpdf
 {
 	protected $page;               // current page number
 	protected $n;                  // current object number

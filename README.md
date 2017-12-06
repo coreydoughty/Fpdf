@@ -1,11 +1,11 @@
-FPDF Symfony Bundle
+FPDF Wrapper Class
 ===================
 
-A Symfony bundle wrapper around the great php FPDF class. All credit to them.
+A wrapper around the great php FPDF class. All credit to them.
 
 [FPDF Website](http://www.fpdf.org/)
 
-Currently uses FPDF 1.81. Testing in Symfony 4.x.
+Currently uses FPDF 1.81.
 
 
 
@@ -23,16 +23,6 @@ Add to your "__composer.json__" file under the "__require__" section:
 "cjd/fpdfbundle": "dev-master"
 ```
 
-Then, enable the bundle by adding the following line in the app/AppKernel.php file of your project:
-
-```php
-// config/bundles.php
-
-// ...
-return [
-    Fpdf\FpdfBundle::class => ['all' => true],
-];
-```
 
 Update composer
 
@@ -46,19 +36,19 @@ php composer.phar update
 In your php file that you want to use the class add a use statement.
 
 ```php
-use FpdfBundle\Model\fpdf;
+use Fpdf\Fpdf;
 ```
 
 Then use as per the FPDF documantation.
 
 ``` php
-$pdf = new fpdf();
+$pdf = new Fpdf();
 ```
 
 Alternatively you can extend as a typical php class.
 
 ```php
-class CustomPdf extends fpdf
+class CustomPdf extends Fpdf
 {
     public function __construct(
         $orientation = 'P',
@@ -96,4 +86,16 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+```
+
+
+### License FPDF
+
+```text
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software to use, copy, modify, distribute, sublicense, and/or sell
+copies of the software, and to permit persons to whom the software is furnished
+to do so.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
 ```
