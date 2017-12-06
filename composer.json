@@ -1,6 +1,5 @@
 {
-  "name": "fpdf-wrapper",
-  "version": "0.0.4",
+  "name": "cjd/fpdfbundle",
   "homepage": "https://github.com/coreydoughty/FpdfBundle",
   "description": "FPDF Wrapper",
   "keywords": ["fpdf", "symfony", "bundle"],
