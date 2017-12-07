@@ -1,9 +1,9 @@
 {
-  "name": "cjd/fpdf",
+  "name": "fpdf/fpdf",
   "homepage": "https://github.com/coreydoughty/Fpdf",
-  "description": "FPDF Wrapper",
+  "description": "FPDF Composer Wrapper",
   "keywords": ["fpdf", "pdf", "wrapper"],
-  "license": "MIT",
+  "license": "FPDF",
   "type": "library",
   "authors": [
     {
