@@ -3,7 +3,7 @@
   "homepage": "https://github.com/coreydoughty/Fpdf",
   "description": "FPDF Composer Wrapper",
   "keywords": ["fpdf", "pdf", "wrapper"],
-  "license": "FPDF",
+  "license": "MIT",
   "type": "library",
   "authors": [
     {
