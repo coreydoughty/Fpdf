@@ -14,7 +14,7 @@ Currently uses FPDF 1.81.
 Add to your "__composer.json__" file under the "__require__" section:
 
 ```
-"fpdf/fpdf": "dev-master"
+"fpdf/fpdf": "^1.8"
 ```
 
 
