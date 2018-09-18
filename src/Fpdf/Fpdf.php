@@ -1159,7 +1159,6 @@ class Fpdf
 		elseif( $ct == 3 )
 			$colspace = 'Indexed';
 		else
-			$colspace = 'DeviceGray';
 			$this->Error( 'Unknown color type: ' . $file );
 		if( ord( $this->_readstream( $f, 1 ) ) != 0 )
 			$this->Error( 'Unknown compression method: ' . $file );
