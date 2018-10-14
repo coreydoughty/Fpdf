@@ -9,8 +9,7 @@ namespace Fpdf;
  * Author:  Olivier PLATHEY                                                     *
  *******************************************************************************/
 
-//define('FPDF_VERSION','1.81');
-
+// define('FPDF_VERSION', '1.81');
 
 class Fpdf
 {
@@ -69,7 +68,6 @@ class Fpdf
 	protected $LayoutMode;         // layout display mode
 	protected $metadata;           // document properties
 	protected $PDFVersion;         // PDF version number
-
 
 	/*******************************************************************************
 	 *                               Public methods                                 *
@@ -258,7 +256,7 @@ class Fpdf
 
 	function Error( $msg ) {
 		// Fatal error
-		throw new \Exception( 'FPDF error: ' . $msg );
+		throw new Exception( 'FPDF error: ' . $msg );
 	}
 
 	function Close() {
@@ -617,7 +615,6 @@ class Fpdf
 		if( $nb > 0 && $s[ $nb - 1 ] == "\n" )
 			$nb--;
 		$b = 0;
-		$b2 = '';
 		if( $border ) {
 			if( $border == 1 ) {
 				$border = 'LTRB';
@@ -636,7 +633,6 @@ class Fpdf
 		$i = 0;
 		$j = 0;
 		$l = 0;
-		$ls = 0;
 		$ns = 0;
 		$nl = 1;
 		while( $i < $nb ) {
@@ -945,8 +941,8 @@ class Fpdf
 		if( ini_get( 'mbstring.func_overload' ) & 2 )
 			$this->Error( 'mbstring overloading must be disabled' );
 		// Ensure runtime magic quotes are disabled
-		//if( get_magic_quotes_runtime() )
-		//	@set_magic_quotes_runtime( 0 );
+		if( get_magic_quotes_runtime() )
+			@set_magic_quotes_runtime( 0 );
 	}
 
 	protected function _checkoutput() {
@@ -1159,7 +1155,6 @@ class Fpdf
 		elseif( $ct == 3 )
 			$colspace = 'Indexed';
 		else
-			$colspace = 'DeviceGray';
 			$this->Error( 'Unknown color type: ' . $file );
 		if( ord( $this->_readstream( $f, 1 ) ) != 0 )
 			$this->Error( 'Unknown compression method: ' . $file );
@@ -1436,11 +1431,11 @@ class Fpdf
 				}
 			}
 			// ToUnicode CMap
-			$cmapkey = $font[ 'name' ];
 			if( isset( $font[ 'uv' ] ) ) {
 				if( isset( $font[ 'enc' ] ) )
 					$cmapkey = $font[ 'enc' ];
-
+				else
+					$cmapkey = $font[ 'name' ];
 				if( !isset( $this->cmaps[ $cmapkey ] ) ) {
 					$cmap = $this->_tounicodecmap( $font[ 'uv' ] );
 					$this->_putstreamobject( $cmap );
@@ -1649,16 +1644,12 @@ class Fpdf
 			$this->_put( '/OpenAction [' . $n . ' 0 R /XYZ null null 1]' );
 		elseif( !is_string( $this->ZoomMode ) )
 			$this->_put( '/OpenAction [' . $n . ' 0 R /XYZ null null ' . sprintf( '%.2F', $this->ZoomMode / 100 ) . ']' );
-		//--- Print Scaling Fix ---
 		if( $this->LayoutMode == 'single' )
-			// $this->_put('/PageLayout /SinglePage');
-			$this->_out( '/Type/Catalog/ViewerPreferences<</PrintScaling/None/FitWindow true>>/PageLayout /SinglePage' );
+			$this->_put( '/PageLayout /SinglePage' );
 		elseif( $this->LayoutMode == 'continuous' )
-			// $this->_put('/PageLayout /OneColumn');
-			$this->_out( '/Type/Catalog/ViewerPreferences<</PrintScaling/None/FitWindow true>>/PageLayout /OneColumn' );
+			$this->_put( '/PageLayout /OneColumn' );
 		elseif( $this->LayoutMode == 'two' )
-			// $this->_put('/PageLayout /TwoColumnLeft');
-			$this->_out( '/Type/Catalog/ViewerPreferences<</PrintScaling/None/FitWindow true>>/PageLayout /TwoColumnLeft' );
+			$this->_put( '/PageLayout /TwoColumnLeft' );
 	}
 
 	protected function _putheader() {
@@ -1673,8 +1664,8 @@ class Fpdf
 
 	protected function _enddoc() {
 		$this->_putheader();
-		$this->_putresources();
 		$this->_putpages();
+		$this->_putresources();
 		// Info
 		$this->_newobj();
 		$this->_put( '<<' );
