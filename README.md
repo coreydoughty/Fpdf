@@ -5,7 +5,7 @@ A composer wrapper around the great php FPDF class. All credit to them.
 
 [FPDF Website](http://www.fpdf.org/)
 
-Currently uses FPDF 1.81.
+Currently uses FPDF 1.82.
 
 
 
@@ -14,7 +14,7 @@ Currently uses FPDF 1.81.
 Add to your "__composer.json__" file under the "__require__" section:
 
 ```
-"fpdf/fpdf": "^1.81"
+"fpdf/fpdf": "^1.82"
 ```
 
 
