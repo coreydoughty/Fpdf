@@ -408,7 +408,7 @@ function MakeFont($fontfile, $savePath = '', $enc='cp1252', $embed=true, $subset
 		{
 			$file = $savePath . $basename.'.z';
 			SaveToFile($file, gzcompress($info['Data']), 'b');
-			$info['File'] = $file;
+			$info['File'] = basename ($file);
 			Message('Font file compressed: '.$file);
 		}
 		else
