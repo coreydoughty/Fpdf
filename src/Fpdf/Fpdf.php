@@ -269,7 +269,7 @@ class Fpdf
 	function Error($msg)
 	{
 		// Fatal error
-		throw new Exception('FPDF error: '.$msg);
+		throw new \Exception('FPDF error: '.$msg);
 	}
 
 	function Close()
