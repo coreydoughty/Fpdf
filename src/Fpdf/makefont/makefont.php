@@ -348,7 +348,7 @@ function SaveToFile($file, $s, $mode)
 	fclose($f);
 }
 
-function MakeDefinitionFile($file, $savePath, $type, $enc, $embed, $subset, $map, $info)
+function MakeDefinitionFile($file, $type, $enc, $embed, $subset, $map, $info)
 {
 	$s = "<?php\n";
 	$s .= '$type = \''.$type."';\n";
@@ -378,10 +378,10 @@ function MakeDefinitionFile($file, $savePath, $type, $enc, $embed, $subset, $map
 		}
 	}
 	$s .= "?>\n";
-	SaveToFile($savePath . $file, $s, 't');
+	SaveToFile($file, $s, 't');
 }
 
-function MakeFont($fontfile, $savePath = '', $enc='cp1252', $embed=true, $subset=true)
+function MakeFont($fontfile, $enc='cp1252', $embed=true, $subset=true)
 {
 	// Generate a font definition file
 	if(!file_exists($fontfile))
@@ -406,9 +406,9 @@ function MakeFont($fontfile, $savePath = '', $enc='cp1252', $embed=true, $subset
 	{
 		if(function_exists('gzcompress'))
 		{
-			$file = $savePath . $basename.'.z';
+			$file = $basename.'.z';
 			SaveToFile($file, gzcompress($info['Data']), 'b');
-			$info['File'] = basename ($file);
+			$info['File'] = $file;
 			Message('Font file compressed: '.$file);
 		}
 		else
@@ -419,7 +419,7 @@ function MakeFont($fontfile, $savePath = '', $enc='cp1252', $embed=true, $subset
 		}
 	}
 
-	MakeDefinitionFile($basename.'.php', $savePath, $type, $enc, $embed, $subset, $map, $info);
+	MakeDefinitionFile($basename.'.php', $type, $enc, $embed, $subset, $map, $info);
 	Message('Font definition file generated: '.$basename.'.php');
 }
 
@@ -428,17 +428,8 @@ if(PHP_SAPI=='cli')
 	// Command-line interface
 	ini_set('log_errors', '0');
 	if($argc==1)
-		die("Usage: php makefont.php fontfile [savePath] [encoding] [embed] [subset]\n");
+		die("Usage: php makefont.php fontfile [encoding] [embed] [subset]\n");
 	$fontfile = $argv[1];
-	
-	// Set save path
-	if($argc>=2) {
-		$savePath = $argv['2'];
-	}
-	else {
-		$savePath = '';
-	}
-	
 	if($argc>=3)
 		$enc = $argv[2];
 	else
@@ -451,6 +442,6 @@ if(PHP_SAPI=='cli')
 		$subset = ($argv[4]=='true' || $argv[4]=='1');
 	else
 		$subset = true;
-	MakeFont($fontfile, $savePath, $enc, $embed, $subset);
+	MakeFont($fontfile, $enc, $embed, $subset);
 }
 ?>
