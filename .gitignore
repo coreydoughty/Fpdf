@@ -1,3 +1,4 @@
+composer.lock
 /var/
 !var/cache/.gitkeep
 !var/logs/.gitkeep
