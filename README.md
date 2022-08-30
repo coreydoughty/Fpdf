@@ -34,7 +34,7 @@ In your php file that you want to use the class add a use statement.
 use Fpdf\Fpdf;
 ```
 
-Then use as per the FPDF documantation.
+Then use as per the FPDF documentation.
 
 ``` php
 $pdf = new Fpdf();
