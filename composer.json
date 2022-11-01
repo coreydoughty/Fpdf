@@ -27,5 +27,12 @@
   },
   "archive": {
     "exclude": ["original"]
+  },
+  "extra": {
+    "laravel": {        
+        "aliases": {
+            "FPDF": "Fpdf\\Fpdf"
+        }
+    }
   }
 }
