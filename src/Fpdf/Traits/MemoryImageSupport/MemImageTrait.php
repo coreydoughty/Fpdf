@@ -42,8 +42,6 @@ trait MemImageTrait
 
     public function GDImage($im, $x=null, $y=null, $w=0, $h=0, $link='')
     {
-        $this->memImageInitialize();
-
         // Display the GD image associated with $im
         ob_start();
         imagepng($im);
