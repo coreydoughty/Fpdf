@@ -22,6 +22,7 @@ trait MemImageTrait
         }
 
         stream_wrapper_register('var', VariableStream::class);
+        $this->memImageInitialized = true;
     }
 
     public function MemImage($data, $x=null, $y=null, $w=0, $h=0, $link='')
