@@ -5,6 +5,7 @@
   "keywords": ["fpdf", "pdf", "wrapper"],
   "license": "MIT",
   "type": "library",
+  "version":"1.0.0",
   "authors": [
     {
       "name": "Corey Doughty",
