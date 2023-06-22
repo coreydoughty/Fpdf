@@ -1,6 +1,6 @@
 {
-  "name": "fpdf/fpdf",
-  "homepage": "https://github.com/coreydoughty/Fpdf",
+  "name": "sotoro/fpdf",
+  "homepage": "",
   "description": "FPDF Composer Wrapper",
   "keywords": ["fpdf", "pdf", "wrapper"],
   "license": "MIT",
