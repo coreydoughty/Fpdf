@@ -29,7 +29,7 @@
     "exclude": ["original"]
   },
   "extra": {
-    "laravel": {        
+    "laravel": {
         "aliases": {
             "FPDF": "Fpdf\\Fpdf"
         }
