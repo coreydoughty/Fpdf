@@ -1010,6 +1010,8 @@ function Output($dest='', $name='', $isUTF8=false)
 				header('Content-Disposition: inline; '.$this->_httpencode('filename',$name,$isUTF8));
 				header('Cache-Control: private, max-age=0, must-revalidate');
 				header('Pragma: public');
+				header('Access-Control-Allow-Origin: *');
+				header('Referrer-Policy: *');
 			}
 			echo $this->buffer;
 			break;
