@@ -1,14 +1,19 @@
 {
-  "name": "fpdf/fpdf",
-  "homepage": "https://github.com/coreydoughty/Fpdf",
-  "description": "FPDF Composer Wrapper",
-  "keywords": ["fpdf", "pdf", "wrapper"],
-  "license": "MIT",
+  "name": "LuanOldCode/Forge_Fpdf",
+  "homepage": "https://github.com/LuanOldCode/Forge_Fpdf",
+  "description": "Forge_Fpdf Composer Wrapper",
+  "keywords": [
+    "Forge",
+    "fpdf",
+    "pdf",
+    "wrapper"
+  ],
+  "license": "Apache License 2.0",
   "type": "library",
   "authors": [
     {
-      "name": "Corey Doughty",
-      "email": "corey@doughty.ca"
+      "name": "Luan Costa",
+      "email": "luangotardodeveloper@gmail.com"
     }
   ],
   "require": {
@@ -22,17 +27,21 @@
   },
   "autoload": {
     "psr-4": {
-      "Fpdf\\": "src/Fpdf"
+      "Fpdf\\": "src/Fpdf",
+      "Forge_Fpdf\\": "LuanOldCode\\Forge_Fpdf"
     }
   },
   "archive": {
-    "exclude": ["original"]
+    "exclude": [
+      "original"
+    ]
   },
   "extra": {
     "laravel": {
-        "aliases": {
-            "FPDF": "Fpdf\\Fpdf"
-        }
+      "aliases": {
+        "FPDF": "Fpdf\\Fpdf",
+        "Forge_Fpdf": "LuanOldCode\\Forge_Fpdf"
+      }
     }
   }
 }

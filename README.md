@@ -1,11 +1,11 @@
-FPDF Wrapper Class
+Forge_Fpdf Wrapper Class
 ===================
 
 A composer wrapper around the great php FPDF class. All credit to them.
-
+Original site FPDF 1.86:
 [FPDF Website](http://www.fpdf.org/)
 
-Currently uses FPDF 1.86.
+Currently uses FPDF 1.00.
 
 
 
@@ -14,7 +14,7 @@ Currently uses FPDF 1.86.
 Add to your "__composer.json__" file under the "__require__" section:
 
 ```
-"fpdf/fpdf": "^1.86"
+"LuanOldCode/Forge_Fpdf": "^1.00"
 ```
 
 
@@ -37,13 +37,13 @@ use Fpdf\Fpdf;
 Then use as per the FPDF documentation.
 
 ``` php
-$pdf = new Fpdf();
+$pdf = new Forge_Fpdf();
 ```
 
 Alternatively you can extend as a typical php class.
 
 ```php
-class CustomPdf extends Fpdf
+class CustomPdf extends Forge_Fpdf
 {
     public function __construct(
         $orientation = 'P',
