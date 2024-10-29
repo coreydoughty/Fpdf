@@ -31,7 +31,7 @@ php composer.phar update
 In your php file that you want to use the class add a use statement.
 
 ```php
-use Fpdf\Fpdf;
+use LuanOldCode\Fpdf;
 ```
 
 Then use as per the FPDF documentation.
